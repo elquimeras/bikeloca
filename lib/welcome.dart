@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import './login.dart';
+import 'package:bikeloca/home.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -18,7 +18,7 @@ class WelcomePage extends StatelessWidget {
                 SizedBox(width: 25),
                 SizedBox(
                   child: Image.asset(
-                    "assets/images/flutter-icon.png",
+                    "assets/images/logo.jpg",
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -28,10 +28,10 @@ class WelcomePage extends StatelessWidget {
                     Expanded(child: RaisedButton(
                         child: Text('Sign in'),
                         onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(builder: (context) => LoginPage()),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
                         },
                       ),
                     ),
@@ -39,10 +39,10 @@ class WelcomePage extends StatelessWidget {
                     Expanded(child: RaisedButton(
                         child: Text('Sign up'),
                         onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(builder: (context) => LoginPage()),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
                         },
                       ),
                     )
