@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Completer<GoogleMapController> _controller = Completer();
 
-  static const LatLng _center = const LatLng(45.521563, -122.677433);
+  static const LatLng _center = const LatLng(-33.449272, -70.660960);
 
   void _onMapCreated(GoogleMapController controller) {
     _controller.complete(controller);
