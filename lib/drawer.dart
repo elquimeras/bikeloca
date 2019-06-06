@@ -12,9 +12,9 @@ class MyDrawer extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Menu de inicio'),
+              child: Text('Bike Lovers - Menu'),
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.grey[400],
               ),
             ),
             ListTile(
