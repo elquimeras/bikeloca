@@ -3,7 +3,7 @@ import 'welcome.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Navigation Basics',
+    title: 'BikeSites',
     home: WelcomePage(),
   ));
 }
