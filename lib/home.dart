@@ -14,7 +14,8 @@ class _HomePageState extends State<HomePage> {
   Completer<GoogleMapController> _controller = Completer();
 
   static const LatLng _center = const LatLng(-33.449272, -70.660960);
-
+  // -33.449272, -70.660960 Santiago, CL Cordinates
+  // 45.517824, -122.685336 Portland, US Cordinates
   void _onMapCreated(GoogleMapController controller) {
     _controller.complete(controller);
   }

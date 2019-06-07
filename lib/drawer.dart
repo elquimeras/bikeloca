@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:bikeloca/home.dart';
+import 'package:bikeloca/login.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -17,16 +19,29 @@ class MyDrawer extends StatelessWidget {
                 color: Colors.grey[400],
               ),
             ),
+            
+            ListTile(
+              title: Text('Home'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+            ),
             ListTile(
               title: Text('Login'),
               onTap: () {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => LoginPage()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
               },
             ),
             ListTile(
