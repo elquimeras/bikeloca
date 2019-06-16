@@ -32,3 +32,7 @@ Add a file Keys.xcconfig on ./ios/flutter/Keys.xcconfig with the folowing
 GOOGLE_MAPS_API_KEY = YOUR_KEY;
 ```
 Add to Runner on xcode
+
+### AddServiceFiles
+**/android/app/google-services.json
+**/ios/Runner/GoogleService-Info.plist
