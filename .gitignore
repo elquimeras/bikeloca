@@ -36,7 +36,6 @@
 **/android/gradlew.bat
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
-**/android/app/src/main/res/values/api-keys.xml
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
@@ -63,7 +62,14 @@
 **/ios/Flutter/flutter_assets/
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+
+# KeyFiles
+## Android
+**/android/app/src/main/res/values/api-keys.xml
+**/android/app/google-services.json
+## IOS
 **/ios/Flutter/Keys.xcconfig
+**/ios/Runner/GoogleService-Info.plist
 
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3

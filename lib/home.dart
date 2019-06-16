@@ -1,11 +1,17 @@
 import 'dart:async' show Completer;
-
 import 'package:flutter/material.dart';
+import 'package:bikeloca/authentication.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
 import './drawer.dart';
 
 class HomePage extends StatefulWidget {
+  HomePage({Key key, this.auth, this.userId, this.onSignedOut})
+      : super(key: key);
+  
+  final BaseAuth auth;
+  final VoidCallback onSignedOut;
+  final String userId;
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -20,6 +26,15 @@ class _HomePageState extends State<HomePage> {
     _controller.complete(controller);
   }
 
+  _signOut() async {
+    try {
+      await widget.auth.signOut();
+      widget.onSignedOut();
+    } catch (e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,6 +42,12 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text('Bike Lovers Sites'),
           backgroundColor: Colors.black,
+          actions: <Widget>[
+            new FlatButton(
+                child: new Text('Logout',
+                    style: new TextStyle(fontSize: 17.0, color: Colors.white)),
+                onPressed: _signOut)
+          ],
         ),
         body: GoogleMap(
           onMapCreated: _onMapCreated,
@@ -40,22 +61,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-
-// class HomePage extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Bikers Location APP'),
-//       ),
-//       body: Center(
-//         child: 
-//           Text('Welcome Biker! Here must the map render.'),
-//       ),
-//       drawer: MyDrawer(),
-//     );
-//   }
-// }
-
